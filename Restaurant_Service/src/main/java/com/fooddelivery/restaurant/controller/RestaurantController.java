@@ -21,6 +21,10 @@ public class RestaurantController {
 	@Autowired
 	private RestaurantService service;
 	
+//	 @GetMapping("/{id}")
+//	    public String getRestaurant1(@PathVariable Long id) {
+//	        return "Restaurant Id : " + id;
+//	    }
 	
 
 	
