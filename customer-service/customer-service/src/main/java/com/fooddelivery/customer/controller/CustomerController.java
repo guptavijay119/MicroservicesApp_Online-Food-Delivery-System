@@ -1,5 +1,7 @@
 package com.fooddelivery.customer.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,6 +30,17 @@ public class CustomerController {
 
         return repository.save(customer);
     }
+    
+    
+    //find all table data 
+    @GetMapping("/allDataFetch")
+    public List<Customer> getdata() {
+    	
+    	List<Customer> alldata=repository.findAll();
+    	
+    	return alldata;
+    }
+    
     
     
     
