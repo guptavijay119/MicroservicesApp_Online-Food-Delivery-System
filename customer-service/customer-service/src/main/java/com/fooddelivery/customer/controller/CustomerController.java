@@ -1,5 +1,6 @@
 package com.fooddelivery.customer.controller;
 
+import java.security.Principal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,17 @@ public class CustomerController {
 	@Autowired
 	private CustomerRepository repository;
 
-			
+		//http://localhost:8081/customers/getdata/1	
+	
+	
+	
+	@GetMapping("/current-user")
+	public String getLogin(Principal principal) {
+		
+		
+		
+		return principal.getName();
+	}
 	   
 	   
     @PostMapping("/savedata")
